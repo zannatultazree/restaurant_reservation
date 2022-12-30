@@ -1,16 +1,12 @@
 <x-guest-layout>
     <!-- Main Hero Content -->
     <div class="container max-w-lg px-4 py-32 mx-auto text-left bg-center bg-no-repeat bg-cover md:max-w-none md:text-center"
-        style="background-image: url('https://cdn.pixabay.com/photo/2016/11/18/14/39/beans-1834984_960_720.jpg')">
+        style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqSV2VoG5RMN1Odt8nk3LWbsCgV3A8SqDsBg&usqp=CAU')">
         <h1
-            class="font-mono text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 md:text-center sm:leading-none lg:text-5xl">
-            <span class="inline md:block">Welcome To Larainfo Restaurant</span>
+            class="font-mono text-3xl font-extrabold text-white bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 md:text-center sm:leading-none lg:text-5xl">
+            <span class="inline md:block">Welcome to Restaurant Reservation System</span>
         </h1>
-        <div class="mx-auto mt-2 text-green-50 md:text-center lg:text-lg">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta voluptatem ab necessitatibus illo
-            praesentium
-            culpa excepturi quae commodi quaerat,
-        </div>
+        
         <div class="flex flex-col items-center mt-12 text-center">
             <span class="relative inline-flex w-full md:w-auto">
                 <a href="{{ route('reservation.step.one') }}" type="button"
@@ -33,11 +29,7 @@
                         <h2 class="text-4xl text-green-600">Welcome</h2>
                         <!-- </h1> -->
                         <p class="mx-auto text-base text-gray-500 sm:max-w-md lg:text-xl md:max-w-3xl">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus nemo incidunt
-                            praesentium, ipsum
-                            culpa minus eveniet, id nesciunt excepturi sit voluptate repudiandae. Explicabo, incidunt
-                            quia.
-                            Repellendus mollitia quaerat est voluptas!
+                            Four years ago, a group of restaurateurs came together around a table. They were fed up with per booking fees, the high commission rates charged by third party platforms, and software that just didn’t do what they needed it to. They figured that there had to be a better way.
                         </p>
                         <div class="relative flex">
                             <a href="#_"
@@ -71,11 +63,7 @@
                             class="mb-4 text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
                             WHY CHOOSE US?</h2>
 
-                        <p class="mb-4 font-medium tracking-tight text-gray-400 xl:mb-6">Lorem ipsum dolor sit amet
-                            consectetur
-                            adipisicing elit. Natus hic atque magni minus aliquam, eos quam incidunt nam iusto sunt
-                            voluptates
-                            inventore a veritatis doloremque corrupti. Veritatis est expedita cupiditate!</p>
+                        <p class="mb-4 font-medium tracking-tight text-gray-400 xl:mb-6">A major benefit of the booking system is that there are no ‘per booking fees’, making it a very affordable way to automate your diary. It’s well known that most other booking systems will use the customer’s information </p>
                         <ul>
                             <li class="flex items-center py-2 space-x-4 xl:py-3">
                                 <svg class="w-8 h-8 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -113,31 +101,7 @@
             </div>
         </div>
     </section>
-    <section class="mt-8 bg-white">
-        <div class="mt-4 text-center">
-            <h3 class="text-2xl font-bold">Our Menu</h3>
-            <h2 class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
-                TODAY'S SPECIALITY</h2>
-        </div>
-        <div class="container w-full px-5 py-6 mx-auto">
-            <div class="grid lg:grid-cols-4 gap-y-6">
-                {{-- @foreach ($specials->menus as $menu) --}}
-                    <div class="max-w-xs mx-4 mb-2 rounded-lg shadow-lg">
-                        <img class="w-full h-48" src="
-                        " alt="Image" />
-                        <div class="px-6 py-4">
-                            <h4 class="mb-3 text-xl font-semibold tracking-tight text-green-600 uppercase">
-                                name</h4>
-                            <p class="leading-normal text-gray-700">description </p>
-                        </div>
-                        <div class="flex items-center justify-between p-4">
-                            <span class="text-xl text-green-600">price </span>
-                        </div>
-                    </div>
-                {{-- @endforeach --}}
-            </div>
-        </div>
-    </section>
+    
     <section class="pt-4 pb-12 bg-gray-800">
         <div class="my-16 text-center">
             <h2 class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">

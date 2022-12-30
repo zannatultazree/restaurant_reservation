@@ -44,7 +44,8 @@
                                     @enderror
                                 </div>
                                 <div class="sm:col-span-6">
-                                    <label for="email" class="block text-sm font-medium text-gray-700"> Email </label>
+                                    <label for="email" class="block text-sm font-medium text-gray-700"> Email
+                                    </label>
                                     <div class="mt-1">
                                         <input type="email" id="email" name="email"
                                             value="{{ $reservation->email ?? '' }}"

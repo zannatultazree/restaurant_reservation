@@ -40,12 +40,15 @@ class CategoryController extends Controller
      */
     public function store(CategoryStoreRequest $request)
     {
-        $image = $request->file('image')->store('public/categories');
+       // $image = $request->file('image')->store('public/categories');
+
+       $imageName = 'restraunt-category' . time() . '.' . $request->image->extension();
+        $request->file('image')->move(public_path('foodcategories'), $imageName);
 
         Category::create([
             'name' => $request->name,
             'description' => $request->description,
-            'image' => $image
+            'image' => $imageName
         ]);
 
         return to_route('admin.categories.index')->with('success', 'Category created successfully.');
@@ -89,13 +92,14 @@ class CategoryController extends Controller
         $image = $category->image;
         if ($request->hasFile('image')) {
             Storage::delete($category->image);
-            $image = $request->file('image')->store('public/categories');
+            $imageName = 'restraunt-category' . time() . '.' . $request->image->extension();
+            $request->file('image')->move(public_path('foodcategories'), $imageName);
         }
 
         $category->update([
             'name' => $request->name,
             'description' => $request->description,
-            'image' => $image
+            'image' => $imageName
         ]);
         return to_route('admin.categories.index')->with('success', 'Category updated successfully.');
     }
@@ -109,6 +113,7 @@ class CategoryController extends Controller
     public function destroy(Category $category)
     {
         Storage::delete($category->image);
+        $category->menus()->detach();
         $category->delete();
 
         return to_route('admin.categories.index')->with('danger', 'Category deleted successfully.');

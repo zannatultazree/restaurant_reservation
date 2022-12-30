@@ -44,12 +44,14 @@ class MenuController extends Controller
      */
     public function store(MenuStoreRequest $request)
     {
-        $image = $request->file('image')->store('public/menus');
+       // $image = $request->file('image')->store('public/menus');
+       $imageName = 'restraunt-menu' . time() . '.' . $request->image->extension();
+        $request->file('image')->move(public_path('foodmenus'), $imageName);
 
         $menu = Menu::create([
             'name' => $request->name,
             'description' => $request->description,
-            'image' => $image,
+            'image' => $imageName,
             'price' => $request->price
         ]);
 
@@ -100,13 +102,13 @@ class MenuController extends Controller
         $image = $menu->image;
         if ($request->hasFile('image')) {
             Storage::delete($menu->image);
-            $image = $request->file('image')->store('public/menus');
-        }
+            $imageName = 'restraunt-menu' . time() . '.' . $request->image->extension();
+            $request->file('image')->move(public_path('foodmenus'), $imageName);        }
 
         $menu->update([
             'name' => $request->name,
             'description' => $request->description,
-            'image' => $image,
+            'image' => $imageName,
             'price' => $request->price
         ]);
 

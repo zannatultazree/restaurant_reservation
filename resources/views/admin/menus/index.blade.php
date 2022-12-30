@@ -44,7 +44,8 @@
                                             </td>
                                             <td
                                                 class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                                <img src="{{ Storage::url($menu->image) }}" class="w-16 h-16 rounded">
+                                                <img src="{{ url('/foodmenus/' . $menu->image) }}"
+                                                    class="w-16 h-16 rounded">
                                             </td>
                                             <td
                                                 class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
